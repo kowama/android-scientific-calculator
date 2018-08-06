@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">s-calc</string>
+
+    <string name="btnCLR">CLR</string>
+    <string name="btnErase">"=="</string>
+
+    <string name="btn1">1</string>
+    <string name="btn2">2</string>
+    <string name="btn3">3</string>
+    <string name="btn4">4</string>
+    <string name="btn5">5</string>
+    <string name="btn6">6</string>
+    <string name="btn7">7</string>
+    <string name="btn8">8</string>
+    <string name="btn9">9</string>
+    <string name="btn0">0</string>
+
+
+    <string name="btnAdd">+</string>
+    <string name="btnSoust">-</string>
+    <string name="btnDividide">&#247;</string>
+    <string name="btnMultiply">&#215;</string>
+    <string name="btnEqual">=</string>
+
+    <string name="btnDot">.</string>
+    <string name="btnAns">Ans</string>
+    <string name="btnE10">&#215;10&#94;x</string>
+
+
+    <string name="btnShift">Shift</string>
+    <string name="btnApha">Alpha</string>
+    <string name="btnBack">&#8592;</string>
+    <string name="btnForward">&#8594;</string>
+    <string name="btnMode">Mode</string>
+    <string name="btnMore">&#8942;</string>
+
+    <string name="btnCalc">CALC</string>
+    <string name="btnInteg">&#8747;dx</string>
+    <string name="btnUp">&#8593;</string>
+    <string name="btnDown">&#8595;</string>
+    <string name="btnInverse">x&#94;-&#185;</string>
+    <string name="btnLn_a">Ln&#170;X</string>
+
+
+    <string name="btnFrac"><sup>"x</sup>&#x2044;<sub>y</sub>"</string>
+    <string name="btnSqrt">&#8730;x</string>
+    <string name="btnSquare">X&#178;</string>
+    <string name="btnXPowY">X&#94;y</string>
+    <string name="btnLog">Log</string>
+    <string name="btnLn">Ln</string>
+
+    <string name="btnMinus">(-)</string>
+    <string name="btnDeg">&#730;&#8244;</string>
+    <string name="btnHyp">Hyp</string>
+    <string name="btnSin">Sin</string>
+    <string name="btnCos">Cos</string>
+    <string name="btnTan">Tan</string>
+
+    <string name="btnRCL">RCL</string>
+    <string name="btnENG">ENG</string>
+    <string name="btnLeftPar">(</string>
+    <string name="btnRightPar">)</string>
+    <string name="btnSD">S&#8652;D</string>
+    <string name="btnMem">M+</string>
+
+</resources>

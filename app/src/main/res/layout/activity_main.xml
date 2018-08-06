@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clac"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <Button
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/lock"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/options"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lock" />
+
+    <Switch
+        android:id="@+id/lock"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/options"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/menu"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- my screen -->
+
+    <LinearLayout
+        android:id="@+id/screen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/keybord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lock">
+
+        <TextView
+            android:id="@+id/screenCalc"
+            style="@style/screenCal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0px"
+            android:layout_weight="40" />
+
+        <TextView
+            android:id="@+id/screenRes"
+            style="@style/screenRes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0px"
+            android:layout_weight="60" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keybord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/keybordUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            app:columnCount="6"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="162dp">
+
+            <!-- First Line  -->
+            <Button
+                android:id="@+id/btnShift"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickControl"
+                android:text="@string/btnShift" />
+
+            <Button
+                android:id="@+id/btnAlpha"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickControl"
+                android:text="@string/btnApha" />
+
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFormater"
+                android:text="@string/btnBack" />
+
+            <Button
+                android:id="@+id/btnForward"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFormater"
+                android:text="@string/btnForward" />
+
+            <Button
+                android:id="@+id/btnMode"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickControl"
+                android:text="@string/btnMode" />
+
+            <Button
+                android:id="@+id/btnMore"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickControl"
+                android:text="@string/btnMore" />
+
+
+            <!-- 2nd Line  -->
+            <Button
+                android:id="@+id/btnCalc"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnCalc" />
+
+            <Button
+                android:id="@+id/btnInteg"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnInteg" />
+
+            <Button
+                android:id="@+id/btnUp"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFormater"
+                android:text="@string/btnUp" />
+
+            <Button
+                android:id="@+id/btn46"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFormater"
+                android:text="@string/btnDown" />
+
+            <Button
+                android:id="@+id/btn45"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnInverse" />
+
+            <Button
+                android:id="@+id/btnLn_a"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnLn_a" />
+
+
+            <!-- 3rd Line  -->
+            <Button
+                android:id="@+id/btn43"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnFrac" />
+
+            <Button
+                android:id="@+id/btn42"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnSqrt" />
+
+            <Button
+                android:id="@+id/btn41"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnSquare" />
+
+            <Button
+                android:id="@+id/btn40"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnXPowY" />
+
+            <Button
+                android:id="@+id/btn39"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnLog" />
+
+            <Button
+                android:id="@+id/btnLn"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnLn" />
+
+            <!-- 4th Line  -->
+            <Button
+                android:id="@+id/btn36"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnMinus" />
+
+            <Button
+                android:id="@+id/btn35"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnDeg" />
+
+            <Button
+                android:id="@+id/btn34"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnHyp" />
+
+            <Button
+                android:id="@+id/btn33"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnSin" />
+
+            <Button
+                android:id="@+id/btn32"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnCos" />
+
+            <Button
+                android:id="@+id/btnTan"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnTan" />
+
+            <!-- 5rd Line  -->
+            <Button
+                android:id="@+id/btn30"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnRCL" />
+
+            <Button
+                android:id="@+id/btn7k"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnENG" />
+
+            <Button
+                android:id="@+id/btn7kkk"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFormater"
+                android:text="@string/btnLeftPar" />
+
+            <Button
+                android:id="@+id/btn7lll"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFormater"
+                android:text="@string/btnRightPar" />
+
+            <Button
+                android:id="@+id/btn7llll"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFormater"
+                android:text="@string/btnSD" />
+
+            <Button
+                android:id="@+id/btnMem"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width1"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickControl"
+                android:text="@string/btnMem" />
+        </android.support.v7.widget.GridLayout>
+
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/keybordDown"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center"
+            android:visibility="visible"
+            app:columnCount="5"
+            app:rowCount="9"
+            tools:layout_editor_absoluteX="13dp"
+            tools:layout_editor_absoluteY="387dp">
+
+            <!-- 6rd Line  -->
+            <Button
+                android:id="@+id/btnl7"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickNumber"
+                android:text="@string/btn7" />
+
+            <Button
+                android:id="@+id/btn8"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickNumber"
+                android:text="@string/btn8" />
+
+            <Button
+                android:id="@+id/btn9"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickNumber"
+                android:text="@string/btn9" />
+
+            <Button
+                android:id="@+id/btnErase"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFormater"
+                android:text="@string/btnErase" />
+
+            <Button
+                android:id="@+id/btnCLR"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickControl"
+                android:text="@string/btnCLR" />
+
+            <!-- 7rd Line  -->
+            <Button
+                android:id="@+id/btn4"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickNumber"
+                android:text="@string/btn4" />
+
+            <Button
+                android:id="@+id/btn5"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickNumber"
+                android:text="@string/btn5" />
+
+            <Button
+                android:id="@+id/btne6"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickNumber"
+                android:text="@string/btn6" />
+
+            <Button
+                android:id="@+id/btnMult"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickOperator"
+                android:text="@string/btnMultiply" />
+
+            <Button
+                android:id="@+id/btnDiv"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickOperator"
+                android:text="@string/btnDividide" />
+
+            <!-- 8rd Line  -->
+            <Button
+                android:id="@+id/btn1"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickNumber"
+                android:text="@string/btn1" />
+
+            <Button
+                android:id="@+id/btn2"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickNumber"
+                android:text="@string/btn2" />
+
+            <Button
+                android:id="@+id/btn3"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickNumber"
+                android:text="@string/btn3" />
+
+            <Button
+                android:id="@+id/btnSoust"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickOperator"
+                android:text="@string/btnSoust" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickOperator"
+                android:text="@string/btnAdd" />
+
+            <!-- 9th line -->
+            <Button
+                android:id="@+id/btn0"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickNumber"
+                android:text="@string/btn0" />
+
+            <Button
+                android:id="@+id/btnDot"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickNumber"
+                android:text="@string/btnDot" />
+
+            <Button
+                android:id="@+id/btnE10"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickFunction"
+                android:text="@string/btnE10" />
+
+            <Button
+                android:id="@+id/btnAns"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickControl"
+                android:text="@string/btnAns" />
+
+            <Button
+                android:id="@+id/btnEqual"
+                style="@style/btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_heiht"
+                android:onClick="onClickOpEqual"
+                android:text="@string/btnEqual" />
+
+
+        </android.support.v7.widget.GridLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_width">65dp</dimen>
+    <dimen name="btn_heiht">40dp</dimen>
+    <dimen name="btn_width1">55dp</dimen>
+    <dimen name="btn_heiht1">40dp</dimen>
+    <dimen name="btnTextsize">18sp</dimen>
+    <dimen name="scClacTextSize">22sp</dimen>
+    <dimen name="scResTextSize">20sp</dimen>
+    <dimen name="btnMg">1dp</dimen>
+    <dimen name="btnMgBottom">5dp</dimen>
+    <dimen name="scMg">5dp</dimen>
+    <dimen name="scPg">10dp</dimen>
+</resources>
